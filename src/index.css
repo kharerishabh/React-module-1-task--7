@@ -12,4 +12,7 @@ body {
   margin: 0;
   background-color: #3f3f3f;
 }
-
+.all-items{
+  width: 80%;
+  margin: 25px auto;
+}

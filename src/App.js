@@ -1,6 +1,7 @@
 import React from "react";
 import ExpenseItem from "./components/Expenses/ExpenseItem";
 import NewExpense from "./components/NewExpense/NewExpense";
+import Card from "./components/UI/Card";
 // import Expenses from "./components/Expenses";
 
 const App = () => {
@@ -38,14 +39,17 @@ const App = () => {
   return (
     <div>
       <NewExpense/>
-      {expenses.map((data) => {
+      <Card className='all-items'>{expenses.map((data) => {
         return <ExpenseItem
+          key={data.id}
           title={data.title}
           location={data.location}
           amount={data.amount}
           date={data.date}
+  
         ></ExpenseItem>;
       })}
+      </Card>
     </div>
   );
 }
