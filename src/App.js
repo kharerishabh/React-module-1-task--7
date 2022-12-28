@@ -2,7 +2,7 @@ import React from "react";
 import ExpenseItem from "./components/Expenses/ExpenseItem";
 import NewExpense from "./components/NewExpense/NewExpense";
 import Card from "./components/UI/Card";
-// import Expenses from "./components/Expenses";
+ //import Expenses from "./components/Expenses/Expenses";
 
 const App = () => {
   const expenses = [
@@ -36,21 +36,27 @@ const App = () => {
     },
   ];
 
+  const addExpenseHandler = (expense) => {
+    console.log("In App.js");
+    console.log(expense);
+  };
   return (
     <div>
-      <NewExpense/>
-      <Card className='all-items'>{expenses.map((data) => {
-        return <ExpenseItem
-          key={data.id}
-          title={data.title}
-          location={data.location}
-          amount={data.amount}
-          date={data.date}
-  
-        ></ExpenseItem>;
-      })}
+      <NewExpense onAddExpense={addExpenseHandler} />
+      <Card className="all-items">
+        {expenses.map((data) => {
+          return (
+            <ExpenseItem
+              key={data.id}
+              title={data.title}
+              location={data.location}
+              amount={data.amount}
+              date={data.date}
+            ></ExpenseItem>
+          );
+        })}
       </Card>
     </div>
   );
-}
+};
 export default App;
