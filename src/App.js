@@ -9,7 +9,7 @@ import Card from "./components/UI/Card";
     title: "Food",
     location: "Resturant",
     amount: 100,
-    date: new Date(2022, 9, 12),
+    date: new Date(2021, 9, 12),
   },
   {
     id: "e2",
@@ -23,14 +23,14 @@ import Card from "./components/UI/Card";
     title: "Movies",
     location: "Mall",
     amount: 1000,
-    date: new Date(2022, 11, 9),
+    date: new Date(2020, 11, 9),
   },
   {
     id: "e4",
     title: "Dinner",
     location: "Hotel",
     amount: 2000,
-    date: new Date(2022, 12, 9),
+    date: new Date(2019, 11, 9),
   },
 ];
 
