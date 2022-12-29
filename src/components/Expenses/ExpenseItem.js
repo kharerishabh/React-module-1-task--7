@@ -17,14 +17,15 @@ const ExpenseItem = (props) =>{
         //console.log(element)
         element.remove();
     }
-    return (<div id='delete'>
+    return (<li><div id='delete'>
         <Card className='expense-item'>
         <ExpenseDate date={props.date}></ExpenseDate>
         <ExpenseDetail title={props.title}amount={amount}location={props.location}></ExpenseDetail>
         <button onClick={priceHandler}>Change Price</button>
         <button onClick={deleteHandler}>Delete Expense</button>
         </Card>
-        </div>);
+        </div>
+        </li>);
 }
 
 export default ExpenseItem;
